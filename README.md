@@ -36,7 +36,7 @@ Run the application locally
 python manage.py runserver 8080
 ```
 
-...then visit the provided URL.
+...then visit the provided URL
 
 ## Feature flags
 
