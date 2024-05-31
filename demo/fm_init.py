@@ -18,9 +18,9 @@ flags = Flags()
 # Register the flags container
 Rox.register(flags)
 
-# Setup the environment key
-environment_key = '41e6957f-9472-4a83-5d47-dec57cc6947e'
-cancel_event = Rox.setup(environment_key).result();
+# Setup the SDK key
+sdk_key = '<INSERT YOUR SDK KEY HERE>'
+cancel_event = Rox.setup(sdk_key).result();
 
 # Boolean flag example
 print('showMessage is {}'.format(flags.showMessage.is_enabled()))
