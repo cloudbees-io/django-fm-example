@@ -1,7 +1,7 @@
 # Example Django application for CloudBees Feature Management
 
 This application demonstrates how you can integrate CloudBees Feature Management with your Djangoapplication.
-The application shows how your React application can respond live to changes in feature flag settings - when you update flag values in the CloudBees platform the display will update within moments.
+The application shows how your Django application can respond live to changes in feature flag settings - when you update flag values in the CloudBees platform the display will update within moments.
 
 ## Insert your SDK Key
 
