@@ -1,0 +1,28 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <link rel="stylesheet" href="{% static 'app.css' %}" />
+  <body>
+    <h1>CloudBees Feature Management Django sample application</h1>
+    <div className="card">
+      {% if flags.showMessage %}
+      <p style="color:{{ flags.fontColor }}">{{ flags.message }}</p>
+      {% endif %}
+    </div>
+
+    <div className="card">
+      <p className="access-platform">
+        Login to the CloudBees Platform below to modify flag values and see them
+        update live in this application.
+      </p>
+      <a href="https://cloudbees.io" target="_blank">
+        <img
+          width="150"
+          src="{% static 'CB-stacked-logo-full-color.svg' %}"
+          className="logo"
+          alt="CloudBees logo"
+        />
+      </a>
+    </div>
+  </body>
+</html>
