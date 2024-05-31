@@ -17,14 +17,14 @@ For example:
 
 ## Run the application
 
-Configure and activate a virtual environment for the application.
+Configure and activate a virtual environment for the application
 
 ```bash
 python3 -m venv venv
 source venv/bin/activate
 ```
 
-Install the application's dependencies.
+Install the application's dependencies
 
 ```bash
 pip install -r requirements.txt
