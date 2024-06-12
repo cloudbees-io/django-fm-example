@@ -30,13 +30,18 @@ Install the application's dependencies
 pip install -r requirements.txt
 ```
 
+Apply Djano migrations
+```bash
+python manage.py migrate
+```
+
 Run the application locally
 
 ```bash
 python manage.py runserver 8080
 ```
 
-...then visit the provided URL
+...then visit the `http://localhost:8080/demo`
 
 ## Feature flags
 
