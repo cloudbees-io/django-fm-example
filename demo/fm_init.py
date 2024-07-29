@@ -19,21 +19,16 @@ flags = Flags()
 # Register the flags container
 Rox.register(flags)
 
-# OVERWRITING network configs to point to a customer environment
-# VPC --> overwrite to point to different environment besides Multi-Tenant Production.
-payload = data.get('payload')
-options = payload.get('options')
-configuration = options.get('configuration')
+# OVERWRITING network configs to point to a custom environment (VPC/Preprod for example).  Default is production.
 network_config = NetworkConfigurationsOptions(
-    configuration['https://api.vpc-install-test.saas-tools.beescloud.com/device/get_configuration'],
-    configuration['https://rox-conf.vpc-install-test.saas-tools.beescloud.com'],
-    configuration['https://api.vpc-install-test.saas-tools.beescloud.com/device/update_state_store/'],
-    configuration['https://rox-state.vpc-install-test.saas-tools.beescloud.com'],
-    configuration['https://fm-analytics.vpc-install-test.saas-tools.beescloud.com'],
-    configuration['https://sdk-notification-service.vpc-install-test.saas-tools.beescloud.com/sse'])
+    'https://api.vpc-install-test.saas-tools.beescloud.com/device/get_configuration',
+    'https://rox-conf.vpc-install-test.saas-tools.beescloud.com',
+    'https://api.vpc-install-test.saas-tools.beescloud.com/device/update_state_store/',
+    'https://rox-state.vpc-install-test.saas-tools.beescloud.com',
+    'https://fm-analytics.vpc-install-test.saas-tools.beescloud.com',
+    'https://sdk-notification-service.vpc-install-test.saas-tools.beescloud.com/sse')
 
-# last value is disbableSignatureVerification
-options = RoxOptions(None, network_config, None, True)
+options = RoxOptions(network_configuration_options=network_config)
 
 # Setup the SDK key
 sdk_key = '<YOUR-SDK-KEY>'
