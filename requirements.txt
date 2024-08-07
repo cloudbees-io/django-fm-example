@@ -4,7 +4,7 @@ certifi==2024.2.2
 cffi==1.16.0
 charset-normalizer==3.3.2
 cryptography==42.0.7
-Django==5.0.6
+Django==5.0.8
 idna==3.7
 monotonic==1.6
 packaging==24.0
