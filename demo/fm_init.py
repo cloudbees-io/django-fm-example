@@ -1,6 +1,5 @@
 # Import SDK
 from rox.server.rox_server import Rox
-from rox.server.flags.rox_flag import RoxFlag
 from rox.core.entities.rox_string import RoxString
 from rox.core.entities.rox_int import RoxInt
 
@@ -8,7 +7,6 @@ from rox.core.entities.rox_int import RoxInt
 class Flags:
     def __init__(self):
         #Define the feature flags
-        self.showMessage = RoxFlag(False)
         self.message = RoxString('This is the default message; try changing some flag values!')
         self.fontColor = RoxString('Black', ['Red', 'Green', 'Blue', 'Black'])
         self.fontSize = RoxInt(99, [10, 50, 99])
@@ -22,13 +20,9 @@ Rox.register(flags)
 sdk_key = '<YOUR-SDK-KEY>'
 cancel_event = Rox.setup(sdk_key).result();
 
-# Boolean flag example
-print('showMessage is {}'.format(flags.showMessage.is_enabled()))
-
 # String flag examples
 print('font color is {}'.format(flags.fontColor.get_value()))
 print('message is {}'.format(flags.message.get_value()))
 
 # Double flag examples
 print('fontSize is {}'.format(flags.fontSize.get_value()))
-
