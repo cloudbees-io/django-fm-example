@@ -9,7 +9,6 @@ class Flags:
     def __init__(self):
         #Define the feature flags
         self.showMessage = RoxFlag(False)
-        self.message = RoxString('This is the default message; try changing some flag values!')
         self.fontColor = RoxString('Black', ['Red', 'Green', 'Blue', 'Black'])
         self.fontSize = RoxInt(99, [10, 50, 99])
         
@@ -27,8 +26,7 @@ print('showMessage is {}'.format(flags.showMessage.is_enabled()))
 
 # String flag examples
 print('font color is {}'.format(flags.fontColor.get_value()))
-print('message is {}'.format(flags.message.get_value()))
+print('message is {}'.format('coucou'))
 
 # Double flag examples
 print('fontSize is {}'.format(flags.fontSize.get_value()))
-
