@@ -10,6 +10,5 @@ def index(request):
         'message': flags.message.get_value(),
         'fontColor': flags.fontColor.get_value(),
         'fontSize': flags.fontSize.get_value(),
-        'showMessage': flags.showMessage.get_value(),
     }}
     return HttpResponse(template.render(context, request))
